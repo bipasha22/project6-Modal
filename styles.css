@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: gray;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-hero {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://github.com/john-smilga/javascript-basic-projects/blob/master/06-modal/final/hero.jpeg?raw=true);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.header-banner {
+  background: #fff;
+  padding: 3rem 0;
+  border-radius: 3px;
+  box-shadow: 2px 2px #dfdfdf;
+  text-align: center;
+  width: 80vw;
+  height: 30vh;
+  max-width: 50vw;
+}
+.modal-btn {
+  text-transform: uppercase;
+  margin: 2rem;
+  padding: 5px;
+  background-color: #73d2f3;
+  border: 1px solid #5ea3a3;
+  border-radius: 3px;
+  color: #faf9f9;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+}
+.modal-btn:hover {
+  background-color: #26baee;
+  color: #f0f3f3;
+}
+
+.modal-overlay {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: -10;
+  display: grid;
+  transition: var(transition);
+  background-color: #a8d8ea;
+  text-align: center;
+}
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+  opacity: 0.9;
+}
+
+.modal-container {
+  background-color: #fff;
+  border-radius: 2px;
+  text-align: center;
+  display: grid;
+  position: relative;
+  width: 80vw;
+  height: 30vh;
+  text-transform: capitalize;
+  max-width: 40vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.close-btn {
+  color: darkred;
+  border-color: #dfdfdf;
+  transition: var(transition);
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.close-btn:hover {
+  color: red;
+  transform: scale(1.1);
+}
